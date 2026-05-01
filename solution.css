@@ -289,11 +289,19 @@
 
 @media (max-width: 1024px) {
     .solution-features-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .tech-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media (max-width: 768px) {
+    .page-hero-content h1 {
+        font-size: 32px;
+    }
+
     .solution-content {
         grid-template-columns: 1fr;
         gap: 40px;
@@ -311,6 +319,10 @@
         height: 300px;
     }
 
+    .solution-features-grid {
+        grid-template-columns: 1fr;
+    }
+
     .tech-grid {
         grid-template-columns: 1fr;
     }
@@ -322,5 +334,15 @@
 
     .contact-box {
         padding: 40px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .solution-feature {
+        padding: 25px 20px;
+    }
+
+    .tech-card {
+        padding: 25px 20px;
     }
 }

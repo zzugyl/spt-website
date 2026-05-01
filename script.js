@@ -1,8 +1,22 @@
 document.addEventListener('DOMContentLoaded', function() {
     const slides = document.querySelectorAll('.slide');
     const dots = document.querySelectorAll('.dot');
+    const navToggle = document.getElementById('navToggle');
+    const nav = document.querySelector('.nav');
     let currentSlide = 0;
     let slideInterval;
+
+    if (navToggle && nav) {
+        navToggle.addEventListener('click', function() {
+            nav.classList.toggle('active');
+        });
+        
+        nav.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', function() {
+                nav.classList.remove('active');
+            });
+        });
+    }
 
     function showSlide(index) {
         slides.forEach((slide, i) => {

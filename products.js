@@ -1,7 +1,21 @@
 document.addEventListener('DOMContentLoaded', function() {
+    const navToggle = document.getElementById('navToggle');
+    const nav = document.querySelector('.nav');
     const tabBtns = document.querySelectorAll('.tab-btn');
     const tabContents = document.querySelectorAll('.tab-content');
     const productCards = document.querySelectorAll('.product-card');
+
+    if (navToggle && nav) {
+        navToggle.addEventListener('click', function() {
+            nav.classList.toggle('active');
+        });
+        
+        nav.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', function() {
+                nav.classList.remove('active');
+            });
+        });
+    }
 
     tabBtns.forEach(btn => {
         btn.addEventListener('click', function() {

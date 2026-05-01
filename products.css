@@ -280,6 +280,12 @@
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
+@media (max-width: 1024px) {
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 @media (max-width: 768px) {
     .page-hero-content h1 {
         font-size: 32px;
@@ -306,5 +312,19 @@
 
     .contact-box {
         padding: 40px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .page-hero-content h1 {
+        font-size: 28px;
+    }
+
+    .product-card {
+        padding: 25px 20px;
+    }
+
+    .product-image {
+        height: 200px;
     }
 }

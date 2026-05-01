@@ -183,7 +183,17 @@
     cursor: not-allowed;
 }
 
+@media (max-width: 1024px) {
+    .news-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 @media (max-width: 768px) {
+    .page-hero-content h1 {
+        font-size: 32px;
+    }
+
     .news-tabs {
         flex-wrap: wrap;
         gap: 10px;
@@ -200,5 +210,25 @@
 
     .news-image {
         height: 180px;
+    }
+
+    .pagination {
+        gap: 8px;
+    }
+
+    .page-btn {
+        padding: 8px 14px;
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 480px) {
+    .news-tabs {
+        justify-content: center;
+    }
+
+    .news-meta {
+        flex-direction: column;
+        gap: 8px;
     }
 }

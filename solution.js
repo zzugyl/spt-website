@@ -1,8 +1,22 @@
 document.addEventListener('DOMContentLoaded', function() {
+    const navToggle = document.getElementById('navToggle');
+    const nav = document.querySelector('.nav');
     const solutionSections = document.querySelectorAll('.solution-section');
     const featureItems = document.querySelectorAll('.feature-item');
     const industryCards = document.querySelectorAll('.industry-card');
     const techCards = document.querySelectorAll('.tech-card');
+
+    if (navToggle && nav) {
+        navToggle.addEventListener('click', function() {
+            nav.classList.toggle('active');
+        });
+        
+        nav.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', function() {
+                nav.classList.remove('active');
+            });
+        });
+    }
 
     const observerOptions = {
         threshold: 0.15,

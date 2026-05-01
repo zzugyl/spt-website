@@ -1,9 +1,23 @@
 document.addEventListener('DOMContentLoaded', function() {
+    const navToggle = document.getElementById('navToggle');
+    const nav = document.querySelector('.nav');
     const tabBtns = document.querySelectorAll('.news-tab-btn');
     const newsCards = document.querySelectorAll('.news-card');
     const pageBtns = document.querySelectorAll('.page-btn');
     const prevBtn = document.querySelector('.page-btn.prev');
     const nextBtn = document.querySelector('.page-btn.next');
+
+    if (navToggle && nav) {
+        navToggle.addEventListener('click', function() {
+            nav.classList.toggle('active');
+        });
+        
+        nav.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', function() {
+                nav.classList.remove('active');
+            });
+        });
+    }
 
     let currentCategory = 'all';
     let currentPage = 1;

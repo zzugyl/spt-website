@@ -1,10 +1,24 @@
 document.addEventListener('DOMContentLoaded', function() {
+    const navToggle = document.getElementById('navToggle');
+    const nav = document.querySelector('.nav');
     const statNumbers = document.querySelectorAll('.stat-number');
     const statSection = document.querySelector('.about-stats');
     const valueCards = document.querySelectorAll('.value-card');
     const teamCards = document.querySelectorAll('.team-card');
     const timelineItems = document.querySelectorAll('.timeline-item');
     let hasAnimated = false;
+
+    if (navToggle && nav) {
+        navToggle.addEventListener('click', function() {
+            nav.classList.toggle('active');
+        });
+        
+        nav.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', function() {
+                nav.classList.remove('active');
+            });
+        });
+    }
 
     function animateNumbers() {
         statNumbers.forEach(num => {
