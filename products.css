@@ -14,7 +14,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, #1a73e8 0%, #0d47a1 50%, #1565c0 100%);
+    background: linear-gradient(135deg, #06b6d4 0%, #10b981 50%, #0ea5e9 100%);
     z-index: -1;
 }
 
@@ -74,14 +74,14 @@
 }
 
 .tab-btn:hover {
-    background: #e8f0fe;
+    background: rgba(6, 182, 212, 0.1);
     transform: translateY(-3px);
 }
 
 .tab-btn.active {
     background: #fff;
-    border-color: #1a73e8;
-    box-shadow: 0 4px 15px rgba(26, 115, 232, 0.2);
+    border-color: #06b6d4;
+    box-shadow: 0 4px 15px rgba(6, 182, 212, 0.2);
 }
 
 .tab-icon {
@@ -95,12 +95,12 @@
 }
 
 .tab-btn.active .tab-text {
-    color: #1a73e8;
+    color: #06b6d4;
 }
 
 .products-content {
     padding: 60px 0;
-    background: #f8f9fa;
+    background: #f0fdfa;
     min-height: 600px;
 }
 
@@ -150,19 +150,21 @@
     background: #fff;
     border-radius: 15px;
     overflow: hidden;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 5px 20px rgba(6, 182, 212, 0.08);
     transition: all 0.3s ease;
+    border: 1px solid rgba(6, 182, 212, 0.1);
 }
 
 .product-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 15px 40px rgba(6, 182, 212, 0.2);
+    border-color: rgba(6, 182, 212, 0.2);
 }
 
 .product-image {
     height: 180px;
     overflow: hidden;
-    background: #f0f4f8;
+    background: #f0fdfa;
 }
 
 .product-image img {
@@ -182,13 +184,13 @@
 
 .product-info h3 {
     font-size: 20px;
-    color: #333;
+    color: #0f172a;
     margin-bottom: 12px;
 }
 
 .product-info p {
     font-size: 14px;
-    color: #666;
+    color: #64748b;
     line-height: 1.7;
     margin-bottom: 15px;
 }
@@ -200,7 +202,7 @@
 .product-features li {
     padding: 6px 0;
     font-size: 14px;
-    color: #555;
+    color: #475569;
     position: relative;
     padding-left: 20px;
 }
@@ -209,22 +211,23 @@
     content: "✓";
     position: absolute;
     left: 0;
-    color: #1a73e8;
+    color: #06b6d4;
     font-weight: bold;
     font-size: 12px;
 }
 
 .contact-section {
     padding: 80px 0;
-    background: #fff;
+    background: #f0fdfa;
 }
 
 .contact-box {
-    background: linear-gradient(135deg, #1a73e8 0%, #0d47a1 100%);
+    background: linear-gradient(135deg, #06b6d4 0%, #10b981 100%);
     border-radius: 20px;
     padding: 60px;
     text-align: center;
     color: #fff;
+    box-shadow: 0 20px 60px rgba(6, 182, 212, 0.3);
 }
 
 .contact-box h2 {
@@ -268,14 +271,15 @@
 
 .contact-box .btn {
     background: #fff;
-    color: #1a73e8;
+    color: #06b6d4;
     padding: 15px 50px;
     font-size: 18px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
 }
 
 .contact-box .btn:hover {
-    background: #1a73e8;
-    color: #fff;
+    background: rgba(255, 255, 255, 0.9);
+    color: #06b6d4;
     transform: translateY(-3px);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }

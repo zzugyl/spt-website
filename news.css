@@ -1,6 +1,6 @@
 .news-section {
     padding: 60px 0;
-    background: #f8f9fa;
+    background: #f0fdfa;
     min-height: 800px;
 }
 
@@ -16,21 +16,21 @@
     font-size: 16px;
     font-weight: 500;
     background: #fff;
-    border: 2px solid #e0e0e0;
+    border: 2px solid rgba(6, 182, 212, 0.2);
     border-radius: 30px;
     cursor: pointer;
     transition: all 0.3s ease;
-    color: #666;
+    color: #64748b;
 }
 
 .news-tab-btn:hover {
-    border-color: #1a73e8;
-    color: #1a73e8;
+    border-color: #06b6d4;
+    color: #06b6d4;
 }
 
 .news-tab-btn.active {
-    background: #1a73e8;
-    border-color: #1a73e8;
+    background: linear-gradient(135deg, #06b6d4, #10b981);
+    border-color: #06b6d4;
     color: #fff;
 }
 
@@ -45,15 +45,17 @@
     background: #fff;
     border-radius: 15px;
     overflow: hidden;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 5px 20px rgba(6, 182, 212, 0.08);
     transition: all 0.3s ease;
     display: flex;
     flex-direction: column;
+    border: 1px solid rgba(6, 182, 212, 0.1);
 }
 
 .news-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 15px 40px rgba(6, 182, 212, 0.2);
+    border-color: rgba(6, 182, 212, 0.2);
 }
 
 .news-card.hidden {
@@ -89,15 +91,15 @@
 }
 
 .news-tag.company {
-    background: #1a73e8;
+    background: linear-gradient(135deg, #06b6d4, #10b981);
 }
 
 .news-tag.industry {
-    background: #34a853;
+    background: #10b981;
 }
 
 .news-tag.notice {
-    background: #ea4335;
+    background: #f59e0b;
 }
 
 .news-content {
@@ -111,13 +113,13 @@
     display: flex;
     justify-content: space-between;
     font-size: 13px;
-    color: #999;
+    color: #94a3b8;
     margin-bottom: 15px;
 }
 
 .news-title {
     font-size: 18px;
-    color: #333;
+    color: #0f172a;
     margin-bottom: 12px;
     line-height: 1.5;
     display: -webkit-box;
@@ -128,7 +130,7 @@
 
 .news-excerpt {
     font-size: 14px;
-    color: #666;
+    color: #64748b;
     line-height: 1.8;
     margin-bottom: 15px;
     display: -webkit-box;
@@ -140,14 +142,14 @@
 
 .news-link {
     font-size: 14px;
-    color: #1a73e8;
+    color: #06b6d4;
     text-decoration: none;
     font-weight: 500;
     transition: color 0.3s;
 }
 
 .news-link:hover {
-    color: #0d47a1;
+    color: #0891b2;
 }
 
 .pagination {
@@ -160,21 +162,21 @@
     padding: 10px 20px;
     font-size: 14px;
     background: #fff;
-    border: 2px solid #e0e0e0;
+    border: 2px solid rgba(6, 182, 212, 0.2);
     border-radius: 8px;
     cursor: pointer;
     transition: all 0.3s ease;
-    color: #666;
+    color: #64748b;
 }
 
 .page-btn:hover:not(:disabled) {
-    border-color: #1a73e8;
-    color: #1a73e8;
+    border-color: #06b6d4;
+    color: #06b6d4;
 }
 
 .page-btn.active {
-    background: #1a73e8;
-    border-color: #1a73e8;
+    background: linear-gradient(135deg, #06b6d4, #10b981);
+    border-color: #06b6d4;
     color: #fff;
 }
 
