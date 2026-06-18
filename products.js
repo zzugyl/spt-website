@@ -1,59 +1,77 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const navToggle = document.getElementById('navToggle');
-    const nav = document.querySelector('.nav');
-    const tabBtns = document.querySelectorAll('.tab-btn');
-    const tabContents = document.querySelectorAll('.tab-content');
-    const productCards = document.querySelectorAll('.product-card');
+    // --- Header scroll effect ---
+    var header = document.getElementById('header');
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 10) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+    });
+
+    // --- Mobile nav toggle ---
+    var navToggle = document.getElementById('navToggle');
+    var nav = document.getElementById('nav');
 
     if (navToggle && nav) {
         navToggle.addEventListener('click', function() {
+            navToggle.classList.toggle('active');
             nav.classList.toggle('active');
+            document.body.style.overflow = nav.classList.contains('active') ? 'hidden' : '';
         });
-        
-        nav.querySelectorAll('.nav-link').forEach(link => {
+
+        nav.querySelectorAll('.nav-link').forEach(function(link) {
             link.addEventListener('click', function() {
+                navToggle.classList.remove('active');
                 nav.classList.remove('active');
+                document.body.style.overflow = '';
             });
         });
     }
 
-    tabBtns.forEach(btn => {
+    // --- Tab switching ---
+    var tabBtns = document.querySelectorAll('.tab-btn');
+    var tabContents = document.querySelectorAll('.tab-content');
+
+    tabBtns.forEach(function(btn) {
         btn.addEventListener('click', function() {
-            const tabId = this.getAttribute('data-tab');
-            
-            tabBtns.forEach(b => b.classList.remove('active'));
-            tabContents.forEach(c => c.classList.remove('active'));
-            
+            var tabId = this.getAttribute('data-tab');
+
+            tabBtns.forEach(function(b) { b.classList.remove('active'); });
+            tabContents.forEach(function(c) { c.classList.remove('active'); });
+
             this.classList.add('active');
             document.getElementById(tabId).classList.add('active');
-            
+
             animateCards(tabId);
         });
     });
 
     function animateCards(tabId) {
-        const activeTab = document.getElementById(tabId);
-        const cards = activeTab.querySelectorAll('.product-card');
-        
-        cards.forEach((card, index) => {
+        var activeTab = document.getElementById(tabId);
+        var cards = activeTab.querySelectorAll('.product-card');
+
+        cards.forEach(function(card, index) {
             card.style.opacity = '0';
-            card.style.transform = 'translateY(30px)';
-            
-            setTimeout(() => {
-                card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            card.style.transform = 'translateY(20px)';
+
+            setTimeout(function() {
+                card.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
                 card.style.opacity = '1';
                 card.style.transform = 'translateY(0)';
-            }, index * 100);
+            }, index * 80);
         });
     }
 
-    const observerOptions = {
+    // --- Initial card animation ---
+    var productCards = document.querySelectorAll('.product-card');
+    var observerOptions = {
         threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
+        rootMargin: '0px 0px -40px 0px'
     };
 
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
+    var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
             if (entry.isIntersecting) {
                 entry.target.style.opacity = '1';
                 entry.target.style.transform = 'translateY(0)';
@@ -61,28 +79,28 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }, observerOptions);
 
-    productCards.forEach((card, index) => {
+    productCards.forEach(function(card, index) {
         card.style.opacity = '0';
-        card.style.transform = 'translateY(30px)';
-        card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-        
-        setTimeout(() => {
+        card.style.transform = 'translateY(20px)';
+        card.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
+
+        setTimeout(function() {
             observer.observe(card);
-        }, index * 100);
+        }, index * 80);
     });
 
-    const navLinks = document.querySelectorAll('.nav-link');
-    navLinks.forEach(link => {
-        link.addEventListener('click', function() {
-            navLinks.forEach(l => l.classList.remove('active'));
-            this.classList.add('active');
+    // --- Scroll animations ---
+    var animElements = document.querySelectorAll('.anim-scale-in');
+    var animObserver = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                animObserver.unobserve(entry.target);
+            }
         });
-    });
+    }, { threshold: 0.1 });
 
-    const contactBtn = document.querySelector('.contact-box .btn');
-    if (contactBtn) {
-        contactBtn.addEventListener('click', function() {
-            alert('感谢您的关注！请拨打热线电话：023-65586813与我们联系。');
-        });
-    }
+    animElements.forEach(function(el) {
+        animObserver.observe(el);
+    });
 });

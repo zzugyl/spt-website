@@ -4,11 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>产品与服务 | 盛百通科技</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="products.css">
 </head>
 <body>
-    <header class="header">
+    <header class="header" id="header">
         <div class="header-container">
             <div class="logo">
                 <a href="index.html">
@@ -20,7 +23,7 @@
                 <span></span>
                 <span></span>
             </div>
-            <nav class="nav">
+            <nav class="nav" id="nav">
                 <a href="index.html" class="nav-link">首页</a>
                 <a href="solution.html" class="nav-link">解决方案</a>
                 <a href="products.html" class="nav-link active">产品与服务</a>
@@ -31,7 +34,6 @@
     </header>
 
     <section class="page-hero">
-        <div class="hero-bg"></div>
         <div class="page-hero-content">
             <h1>产品与服务</h1>
             <p>智慧电梯全场景解决方案专家</p>
@@ -61,8 +63,9 @@
         <div class="container">
             <div class="tab-content active" id="hardware">
                 <div class="product-intro">
+                    <p class="section-label">智能硬件</p>
                     <h2>智能硬件设备</h2>
-                    <p>打造主动安全的智能硬件，实现设备全生命周期的预测性维护与持续进化</p>
+                    <p class="section-desc">打造主动安全的智能硬件，实现设备全生命周期的预测性维护与持续进化</p>
                 </div>
                 <div class="product-grid">
                     <div class="product-card">
@@ -126,8 +129,9 @@
 
             <div class="tab-content" id="platform">
                 <div class="product-intro">
+                    <p class="section-label">系统平台</p>
                     <h2>系统平台</h2>
-                    <p>领先的技术架构，打造智能化解决方案</p>
+                    <p class="section-desc">领先的技术架构，打造智能化解决方案</p>
                 </div>
                 <div class="product-grid">
                     <div class="product-card">
@@ -191,8 +195,9 @@
 
             <div class="tab-content" id="data">
                 <div class="product-intro">
+                    <p class="section-label">数据服务</p>
                     <h2>数据服务</h2>
-                    <p>数据驱动决策，赋能智慧电梯管理</p>
+                    <p class="section-desc">数据驱动决策，赋能智慧电梯管理</p>
                 </div>
                 <div class="product-grid">
                     <div class="product-card">
@@ -258,7 +263,7 @@
 
     <section class="contact-section">
         <div class="container">
-            <div class="contact-box">
+            <div class="contact-box anim-scale-in">
                 <h2>了解更多产品信息</h2>
                 <p>我们的专家团队将为您提供定制化的解决方案</p>
                 <div class="contact-methods">
@@ -273,7 +278,7 @@
                         <span class="contact-value">spt@sptyun.com</span>
                     </div>
                 </div>
-                <button class="btn">联系我们</button>
+                <button class="btn-filled" onclick="alert('感谢您的关注！请拨打热线电话：023-65586813与我们联系。')">联系我们</button>
             </div>
         </div>
     </section>
@@ -291,7 +296,6 @@
                         <a href="about.html">关于我们</a>
                     </nav>
                 </div>
-                
                 <div class="footer-section">
                     <h4>联系我们</h4>
                     <div class="contact-info">
@@ -300,7 +304,6 @@
                         <p>地址: 重庆市两江新区北滨二路保利中心B3栋10、11F</p>
                     </div>
                 </div>
-                
                 <div class="footer-section">
                     <h4>关注公众号</h4>
                     <div class="qrcode">
@@ -308,10 +311,9 @@
                     </div>
                 </div>
             </div>
-            
             <div class="footer-bottom">
                 <p>智慧电梯全场景解决方案专家</p>
-                <p class="copyright">© 2026 sptyun.com版权所有 渝ICP备16011984号-2</p>
+                <p class="copyright">© 2026 sptyun.com 版权所有 | 渝ICP备16011984号-2</p>
             </div>
         </div>
     </footer>

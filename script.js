@@ -1,29 +1,45 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const slides = document.querySelectorAll('.slide');
-    const dots = document.querySelectorAll('.dot');
+    // --- Header scroll effect ---
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 10) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+    });
+
+    // --- Mobile nav toggle ---
     const navToggle = document.getElementById('navToggle');
-    const nav = document.querySelector('.nav');
-    let currentSlide = 0;
-    let slideInterval;
+    const nav = document.getElementById('nav');
 
     if (navToggle && nav) {
         navToggle.addEventListener('click', function() {
+            navToggle.classList.toggle('active');
             nav.classList.toggle('active');
+            document.body.style.overflow = nav.classList.contains('active') ? 'hidden' : '';
         });
-        
-        nav.querySelectorAll('.nav-link').forEach(link => {
+
+        nav.querySelectorAll('.nav-link').forEach(function(link) {
             link.addEventListener('click', function() {
+                navToggle.classList.remove('active');
                 nav.classList.remove('active');
+                document.body.style.overflow = '';
             });
         });
     }
 
+    // --- Hero slider ---
+    var slides = document.querySelectorAll('.slide');
+    var dots = document.querySelectorAll('.dot');
+    var currentSlide = 0;
+    var slideInterval;
+
     function showSlide(index) {
-        slides.forEach((slide, i) => {
+        slides.forEach(function(slide, i) {
             slide.classList.remove('active');
             dots[i].classList.remove('active');
         });
-        
         slides[index].classList.add('active');
         dots[index].classList.add('active');
     }
@@ -37,7 +53,7 @@ document.addEventListener('DOMContentLoaded', function() {
         slideInterval = setInterval(nextSlide, 4000);
     }
 
-    dots.forEach((dot, index) => {
+    dots.forEach(function(dot, index) {
         dot.addEventListener('click', function() {
             clearInterval(slideInterval);
             currentSlide = index;
@@ -48,41 +64,24 @@ document.addEventListener('DOMContentLoaded', function() {
 
     startSlider();
 
-    const heroButtons = document.querySelectorAll('.hero .btn');
-    heroButtons.forEach((btn, index) => {
-        btn.addEventListener('click', function() {
-            const pages = ['solution.html', 'products.html', 'about.html'];
-            window.location.href = pages[index] || 'solution.html';
-        });
-    });
+    // --- Scroll animations ---
+    var animElements = document.querySelectorAll('.anim-fade-up, .anim-fade-in, .anim-scale-in, .anim-slide-left, .anim-slide-right');
 
-    const navLinks = document.querySelectorAll('.nav-link');
-    navLinks.forEach(link => {
-        link.addEventListener('click', function() {
-            navLinks.forEach(l => l.classList.remove('active'));
-            this.classList.add('active');
-        });
-    });
-
-    const serviceCards = document.querySelectorAll('.service-card');
-    const observerOptions = {
+    var observerOptions = {
         threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
+        rootMargin: '0px 0px -40px 0px'
     };
 
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
+    var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
             if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
             }
         });
     }, observerOptions);
 
-    serviceCards.forEach(card => {
-        card.style.opacity = '0';
-        card.style.transform = 'translateY(30px)';
-        card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-        observer.observe(card);
+    animElements.forEach(function(el) {
+        observer.observe(el);
     });
 });

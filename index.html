@@ -4,10 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>盛百通科技 | 智慧电梯全场景解决方案专家</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="header">
+    <header class="header" id="header">
         <div class="header-container">
             <div class="logo">
                 <a href="index.html">
@@ -19,7 +22,7 @@
                 <span></span>
                 <span></span>
             </div>
-            <nav class="nav">
+            <nav class="nav" id="nav">
                 <a href="index.html" class="nav-link active">首页</a>
                 <a href="solution.html" class="nav-link">解决方案</a>
                 <a href="products.html" class="nav-link">产品与服务</a>
@@ -34,19 +37,19 @@
             <div class="slide active">
                 <div class="slide-content">
                     <h1>智慧电梯全场景解决方案专家</h1>
-                    <button class="btn">了解更多</button>
+                    <a href="solution.html" class="btn-filled">了解更多</a>
                 </div>
             </div>
             <div class="slide">
                 <div class="slide-content">
                     <h1>数智赋能，为城市高度保驾护航</h1>
-                    <button class="btn">了解更多</button>
+                    <a href="products.html" class="btn-filled">了解更多</a>
                 </div>
             </div>
             <div class="slide">
                 <div class="slide-content">
                     <h1>引领数智梯界，定义出行新标准</h1>
-                    <button class="btn">了解更多</button>
+                    <a href="about.html" class="btn-filled">了解更多</a>
                 </div>
             </div>
         </div>
@@ -58,15 +61,14 @@
     </section>
 
     <section class="services">
+        <div class="container text-center">
+            <p class="section-label anim-fade-up">公司主营</p>
+            <h2 class="section-title anim-fade-up anim-delay-1">为电梯全链条产业主体<br>提供专业的智慧电梯解决方案</h2>
+            <p class="section-subtitle anim-fade-up anim-delay-2" style="margin: 0 auto 64px;">运用人工智能和数字孪生等信息技术，助力提升城市治理能力现代化水平</p>
+        </div>
         <div class="container">
-            <h2 class="section-title">公司主营</h2>
-            <p class="section-subtitle">为电梯全链条产业主体提供专业的智慧电梯解决方案</p>
-            
             <div class="service-cards">
-                <div class="service-card">
-                    <div class="service-icon">
-                        <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=city%20management%20smart%20city%20icon%20blue&image_size=square" alt="城市综合治理">
-                    </div>
+                <div class="service-card anim-fade-up">
                     <h3>城市综合治理</h3>
                     <p>建设电梯物联网，运用人工智能和数字孪生等信息技术，助力提升城市治理能力现代化水平。</p>
                     <ul class="service-features">
@@ -76,11 +78,7 @@
                         <li>多跨应用</li>
                     </ul>
                 </div>
-                
-                <div class="service-card">
-                    <div class="service-icon">
-                        <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=emergency%20rescue%20elevator%20safety%20icon%20red&image_size=square" alt="电梯应急救援处置">
-                    </div>
+                <div class="service-card anim-fade-up anim-delay-1">
                     <h3>电梯应急救援处置</h3>
                     <p>国内运营时间最长、处置场景最全的应急处置平台之一。</p>
                     <ul class="service-features">
@@ -89,11 +87,7 @@
                         <li>实时监控</li>
                     </ul>
                 </div>
-                
-                <div class="service-card">
-                    <div class="service-icon">
-                        <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=industry%20application%20solution%20icon%20green&image_size=square" alt="行业应用">
-                    </div>
+                <div class="service-card anim-fade-up anim-delay-2">
                     <h3>行业应用</h3>
                     <p>为各行业提供定制化的全场景解决方案，提升运营效率和用户体验。</p>
                     <ul class="service-features">
@@ -107,15 +101,13 @@
     </section>
 
     <section class="technology">
-        <div class="container">
-            <h2 class="section-title">核心技术</h2>
-            <p class="section-subtitle">领先的技术架构，打造智能化解决方案</p>
-            
+        <div class="container text-center">
+            <p class="section-label anim-fade-up" style="color: rgba(255,255,255,0.5);">核心技术</p>
+            <h2 class="section-title anim-fade-up anim-delay-1">领先的技术架构<br>打造智能化解决方案</h2>
+        </div>
+        <div class="container" style="margin-top: 48px;">
             <div class="tech-content">
-                <div class="tech-card">
-                    <div class="tech-icon">
-                        <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=hardware%20device%20iot%20sensor%20icon%20blue&image_size=square" alt="硬件设备">
-                    </div>
+                <div class="tech-card anim-scale-in">
                     <h3>硬件设备</h3>
                     <p>打造主动安全的智能硬件，实现设备全生命周期的预测性维护与持续进化</p>
                     <ul class="tech-features">
@@ -141,7 +133,6 @@
                         <a href="about.html">关于我们</a>
                     </nav>
                 </div>
-                
                 <div class="footer-section">
                     <h4>联系我们</h4>
                     <div class="contact-info">
@@ -150,7 +141,6 @@
                         <p>地址: 重庆市两江新区北滨二路保利中心B3栋10、11F</p>
                     </div>
                 </div>
-                
                 <div class="footer-section">
                     <h4>关注公众号</h4>
                     <div class="qrcode">
@@ -158,10 +148,9 @@
                     </div>
                 </div>
             </div>
-            
             <div class="footer-bottom">
                 <p>智慧电梯全场景解决方案专家</p>
-                <p class="copyright">© 2026 sptyun.com版权所有 渝ICP备16011984号-2</p>
+                <p class="copyright">© 2026 sptyun.com 版权所有 | 渝ICP备16011984号-2</p>
             </div>
         </div>
     </footer>

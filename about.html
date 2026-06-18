@@ -4,11 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>关于我们 | 盛百通科技</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="about.css">
 </head>
 <body>
-    <header class="header">
+    <header class="header" id="header">
         <div class="header-container">
             <div class="logo">
                 <a href="index.html">
@@ -20,7 +23,7 @@
                 <span></span>
                 <span></span>
             </div>
-            <nav class="nav">
+            <nav class="nav" id="nav">
                 <a href="index.html" class="nav-link">首页</a>
                 <a href="solution.html" class="nav-link">解决方案</a>
                 <a href="products.html" class="nav-link">产品与服务</a>
@@ -31,7 +34,6 @@
     </header>
 
     <section class="page-hero">
-        <div class="hero-bg"></div>
         <div class="page-hero-content">
             <h1>关于我们</h1>
             <p>智慧电梯全场景解决方案专家</p>
@@ -41,12 +43,13 @@
     <section class="about-intro">
         <div class="container">
             <div class="about-content">
-                <div class="about-text">
-                    <h2>公司简介</h2>
+                <div class="about-text anim-slide-left">
+                    <p class="section-label">公司简介</p>
+                    <h2>盛百通科技</h2>
                     <p>盛百通科技是一家专注于智慧电梯解决方案的高新技术企业，致力于为电梯全链条产业主体提供专业的智慧电梯解决方案。公司运用人工智能和数字孪生等信息技术，助力提升城市治理能力现代化水平。</p>
                     <p>作为国内运营时间最长、处置场景最全的应急处置平台之一，盛百通科技始终坚持以技术创新为核心，为客户提供高品质的产品和服务。</p>
                 </div>
-                <div class="about-image">
+                <div class="about-image anim-slide-right">
                     <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=modern%20technology%20company%20office%20building%20chongqing%20skyline&image_size=square" alt="公司图片">
                 </div>
             </div>
@@ -54,26 +57,28 @@
     </section>
 
     <section class="about-values">
-        <div class="container">
-            <h2 class="section-title">核心价值观</h2>
-            <p class="section-subtitle">创新、专业、服务、共赢</p>
+        <div class="container text-center">
+            <p class="section-label anim-fade-up">核心价值观</p>
+            <h2 class="section-title anim-fade-up anim-delay-1">创新、专业、服务、共赢</h2>
+        </div>
+        <div class="container" style="margin-top: 64px;">
             <div class="values-grid">
-                <div class="value-card">
+                <div class="value-card anim-fade-up">
                     <div class="value-icon">💡</div>
                     <h3>创新</h3>
                     <p>持续创新，引领行业发展，用科技改变生活</p>
                 </div>
-                <div class="value-card">
+                <div class="value-card anim-fade-up anim-delay-1">
                     <div class="value-icon">🎯</div>
                     <h3>专业</h3>
                     <p>深耕行业，精益求精，提供专业解决方案</p>
                 </div>
-                <div class="value-card">
+                <div class="value-card anim-fade-up anim-delay-2">
                     <div class="value-icon">🤝</div>
                     <h3>服务</h3>
                     <p>客户至上，用心服务，创造卓越体验</p>
                 </div>
-                <div class="value-card">
+                <div class="value-card anim-fade-up anim-delay-3">
                     <div class="value-icon">🌟</div>
                     <h3>共赢</h3>
                     <p>合作共赢，与合作伙伴共同成长</p>
@@ -83,11 +88,13 @@
     </section>
 
     <section class="about-timeline">
-        <div class="container">
-            <h2 class="section-title">发展历程</h2>
-            <p class="section-subtitle">砥砺前行，筑梦未来</p>
+        <div class="container text-center">
+            <p class="section-label anim-fade-up">发展历程</p>
+            <h2 class="section-title anim-fade-up anim-delay-1">砥砺前行，筑梦未来</h2>
+        </div>
+        <div class="container" style="margin-top: 64px;">
             <div class="timeline">
-                <div class="timeline-item">
+                <div class="timeline-item anim-fade-up">
                     <div class="timeline-dot"></div>
                     <div class="timeline-content">
                         <span class="timeline-year">2018</span>
@@ -95,7 +102,7 @@
                         <p>盛百通科技在重庆正式成立，开启智慧电梯解决方案的研发之旅</p>
                     </div>
                 </div>
-                <div class="timeline-item">
+                <div class="timeline-item anim-fade-up anim-delay-1">
                     <div class="timeline-dot"></div>
                     <div class="timeline-content">
                         <span class="timeline-year">2019</span>
@@ -103,7 +110,7 @@
                         <p>城市电梯监管平台在重庆市渝中区成功上线，实现电梯智慧化管理</p>
                     </div>
                 </div>
-                <div class="timeline-item">
+                <div class="timeline-item anim-fade-up anim-delay-2">
                     <div class="timeline-dot"></div>
                     <div class="timeline-content">
                         <span class="timeline-year">2021</span>
@@ -111,7 +118,7 @@
                         <p>AI故障预测系统研发成功，获得多项技术专利，行业领先地位确立</p>
                     </div>
                 </div>
-                <div class="timeline-item">
+                <div class="timeline-item anim-fade-up anim-delay-3">
                     <div class="timeline-dot"></div>
                     <div class="timeline-content">
                         <span class="timeline-year">2023</span>
@@ -119,7 +126,7 @@
                         <p>业务覆盖全国多个省市，合作伙伴超过500家，服务电梯数量突破10万台</p>
                     </div>
                 </div>
-                <div class="timeline-item">
+                <div class="timeline-item anim-fade-up anim-delay-4">
                     <div class="timeline-dot"></div>
                     <div class="timeline-content">
                         <span class="timeline-year">2026</span>
@@ -132,11 +139,13 @@
     </section>
 
     <section class="about-team">
-        <div class="container">
-            <h2 class="section-title">核心团队</h2>
-            <p class="section-subtitle">专业、专注、富有激情的团队</p>
+        <div class="container text-center">
+            <p class="section-label anim-fade-up">核心团队</p>
+            <h2 class="section-title anim-fade-up anim-delay-1">专业、专注、富有激情的团队</h2>
+        </div>
+        <div class="container" style="margin-top: 64px;">
             <div class="team-grid">
-                <div class="team-card">
+                <div class="team-card anim-fade-up">
                     <div class="team-image">
                         <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=professional%20business%20man%20portrait%20suit&image_size=square" alt="张明">
                     </div>
@@ -146,7 +155,7 @@
                         <p class="team-desc">多年电梯行业经验，专注于智慧城市解决方案</p>
                     </div>
                 </div>
-                <div class="team-card">
+                <div class="team-card anim-fade-up anim-delay-1">
                     <div class="team-image">
                         <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=professional%20business%20woman%20portrait%20suit&image_size=square" alt="李华">
                     </div>
@@ -156,7 +165,7 @@
                         <p class="team-desc">AI技术专家，主导多项核心技术的研发</p>
                     </div>
                 </div>
-                <div class="team-card">
+                <div class="team-card anim-fade-up anim-delay-2">
                     <div class="team-image">
                         <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=professional%20business%20man%20portrait%20casual&image_size=square" alt="王强">
                     </div>
@@ -166,7 +175,7 @@
                         <p class="team-desc">丰富的项目管理经验，负责公司运营管理</p>
                     </div>
                 </div>
-                <div class="team-card">
+                <div class="team-card anim-fade-up anim-delay-3">
                     <div class="team-image">
                         <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=professional%20business%20woman%20portrait%20glasses&image_size=square" alt="陈静">
                     </div>
@@ -183,22 +192,22 @@
     <section class="about-stats">
         <div class="container">
             <div class="stats-grid">
-                <div class="stat-item">
+                <div class="stat-item anim-fade-up">
                     <span class="stat-number" data-target="500">0</span>
                     <span class="stat-unit">+</span>
                     <p class="stat-label">合作伙伴</p>
                 </div>
-                <div class="stat-item">
+                <div class="stat-item anim-fade-up anim-delay-1">
                     <span class="stat-number" data-target="100000">0</span>
                     <span class="stat-unit">+</span>
                     <p class="stat-label">服务电梯数量</p>
                 </div>
-                <div class="stat-item">
+                <div class="stat-item anim-fade-up anim-delay-2">
                     <span class="stat-number" data-target="50">0</span>
                     <span class="stat-unit">+</span>
                     <p class="stat-label">技术专利</p>
                 </div>
-                <div class="stat-item">
+                <div class="stat-item anim-fade-up anim-delay-3">
                     <span class="stat-number" data-target="20">0</span>
                     <span class="stat-unit">+</span>
                     <p class="stat-label">省市覆盖</p>
@@ -209,7 +218,7 @@
 
     <section class="contact-section">
         <div class="container">
-            <div class="contact-box">
+            <div class="contact-box anim-scale-in">
                 <h2>联系我们</h2>
                 <p>期待与您携手合作，共创智慧未来</p>
                 <div class="contact-methods">
@@ -229,7 +238,7 @@
                         <span class="contact-value">重庆市两江新区北滨二路保利中心B3栋10、11F</span>
                     </div>
                 </div>
-                <button class="btn">在线咨询</button>
+                <button class="btn-filled" onclick="alert('感谢您的关注！请拨打热线电话：023-65586813或发送邮件至 spt@sptyun.com 与我们联系。')">在线咨询</button>
             </div>
         </div>
     </section>
@@ -247,7 +256,6 @@
                         <a href="about.html">关于我们</a>
                     </nav>
                 </div>
-                
                 <div class="footer-section">
                     <h4>联系我们</h4>
                     <div class="contact-info">
@@ -256,7 +264,6 @@
                         <p>地址: 重庆市两江新区北滨二路保利中心B3栋10、11F</p>
                     </div>
                 </div>
-                
                 <div class="footer-section">
                     <h4>关注公众号</h4>
                     <div class="qrcode">
@@ -264,10 +271,9 @@
                     </div>
                 </div>
             </div>
-            
             <div class="footer-bottom">
                 <p>智慧电梯全场景解决方案专家</p>
-                <p class="copyright">© 2026 sptyun.com版权所有 渝ICP备16011984号-2</p>
+                <p class="copyright">© 2026 sptyun.com 版权所有 | 渝ICP备16011984号-2</p>
             </div>
         </div>
     </footer>

@@ -4,11 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>解决方案 | 盛百通科技</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="solution.css">
 </head>
 <body>
-    <header class="header">
+    <header class="header" id="header">
         <div class="header-container">
             <div class="logo">
                 <a href="index.html">
@@ -20,7 +23,7 @@
                 <span></span>
                 <span></span>
             </div>
-            <nav class="nav">
+            <nav class="nav" id="nav">
                 <a href="index.html" class="nav-link">首页</a>
                 <a href="solution.html" class="nav-link active">解决方案</a>
                 <a href="products.html" class="nav-link">产品与服务</a>
@@ -31,7 +34,6 @@
     </header>
 
     <section class="page-hero">
-        <div class="hero-bg"></div>
         <div class="page-hero-content">
             <h1>解决方案</h1>
             <p>智慧电梯全场景解决方案专家</p>
@@ -39,17 +41,17 @@
     </section>
 
     <section class="solutions-overview">
-        <div class="container">
-            <h2 class="section-title">我们的解决方案</h2>
-            <p class="section-subtitle">为电梯全链条产业主体提供专业的智慧电梯解决方案</p>
+        <div class="container text-center">
+            <p class="section-label anim-fade-up">我们的解决方案</p>
+            <h2 class="section-title anim-fade-up anim-delay-1">为电梯全链条产业主体<br>提供专业的智慧电梯解决方案</h2>
         </div>
     </section>
 
     <section class="solution-section" id="city">
         <div class="container">
             <div class="solution-content">
-                <div class="solution-text">
-                    <div class="solution-tag">城市治理</div>
+                <div class="solution-text anim-slide-left">
+                    <span class="solution-tag">城市治理</span>
                     <h2>城市综合治理解决方案</h2>
                     <p>建设电梯物联网，运用人工智能和数字孪生等信息技术，助力提升城市治理能力现代化水平，实现电梯安全的全面感知、智能预警和高效处置。</p>
                     <div class="solution-features">
@@ -83,7 +85,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="solution-image">
+                <div class="solution-image anim-slide-right">
                     <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=smart%20city%20command%20center%20digital%20twin%20technology%20blue&image_size=square" alt="城市综合治理">
                 </div>
             </div>
@@ -93,8 +95,8 @@
     <section class="solution-section alternate" id="rescue">
         <div class="container">
             <div class="solution-content reverse">
-                <div class="solution-text">
-                    <div class="solution-tag">应急救援</div>
+                <div class="solution-text anim-slide-right">
+                    <span class="solution-tag">应急救援</span>
                     <h2>电梯应急救援处置解决方案</h2>
                     <p>国内运营时间最长、处置场景最全的应急处置平台之一，实现电梯困人等突发事件的快速响应、智能调度与高效处置，最大限度保障乘客安全。</p>
                     <div class="solution-features">
@@ -121,7 +123,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="solution-image">
+                <div class="solution-image anim-slide-left">
                     <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=emergency%20rescue%20command%20center%20dispatch%20technology%20red&image_size=square" alt="应急救援">
                 </div>
             </div>
@@ -131,8 +133,8 @@
     <section class="solution-section" id="industry">
         <div class="container">
             <div class="solution-content">
-                <div class="solution-text">
-                    <div class="solution-tag">行业应用</div>
+                <div class="solution-text anim-slide-left">
+                    <span class="solution-tag">行业应用</span>
                     <h2>行业应用解决方案</h2>
                     <p>为各行业提供定制化的全场景解决方案，覆盖电梯维保、物业管理、保险服务等多个领域，全面提升运营效率和用户体验。</p>
                     <div class="solution-features-grid">
@@ -171,7 +173,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="solution-image">
+                <div class="solution-image anim-slide-right">
                     <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=industry%20solution%20smart%20building%20management%20technology%20green&image_size=square" alt="行业应用">
                 </div>
             </div>
@@ -179,26 +181,28 @@
     </section>
 
     <section class="technology-support">
-        <div class="container">
-            <h2 class="section-title">技术支撑</h2>
-            <p class="section-subtitle">领先的技术架构，为解决方案提供强大支撑</p>
+        <div class="container text-center">
+            <p class="section-label anim-fade-up" style="color: rgba(255,255,255,0.5);">技术支撑</p>
+            <h2 class="section-title anim-fade-up anim-delay-1" style="color: #fff;">领先的技术架构<br>为解决方案提供强大支撑</h2>
+        </div>
+        <div class="container" style="margin-top: 64px;">
             <div class="tech-grid">
-                <div class="tech-card">
+                <div class="tech-card anim-fade-up">
                     <div class="tech-icon">🤖</div>
                     <h3>人工智能</h3>
                     <p>运用深度学习、计算机视觉等技术，实现电梯故障预测、异常行为识别等智能应用</p>
                 </div>
-                <div class="tech-card">
+                <div class="tech-card anim-fade-up anim-delay-1">
                     <div class="tech-icon">🌐</div>
                     <h3>物联网技术</h3>
                     <p>多维度感知设备状态，实时采集运行数据，构建全面的电梯物联网体系</p>
                 </div>
-                <div class="tech-card">
+                <div class="tech-card anim-fade-up anim-delay-2">
                     <div class="tech-icon">🔮</div>
                     <h3>数字孪生</h3>
                     <p>构建电梯数字孪生体，实现设备全生命周期的可视化管理和仿真分析</p>
                 </div>
-                <div class="tech-card">
+                <div class="tech-card anim-fade-up anim-delay-3">
                     <div class="tech-icon">☁️</div>
                     <h3>云计算</h3>
                     <p>基于云平台的高可用、高扩展架构，支持海量数据处理和分析</p>
@@ -209,7 +213,7 @@
 
     <section class="contact-section">
         <div class="container">
-            <div class="contact-box">
+            <div class="contact-box anim-scale-in">
                 <h2>获取定制化解决方案</h2>
                 <p>我们的专家团队将为您提供最合适的解决方案</p>
                 <div class="contact-methods">
@@ -224,7 +228,7 @@
                         <span class="contact-value">spt@sptyun.com</span>
                     </div>
                 </div>
-                <button class="btn">立即咨询</button>
+                <button class="btn-filled" onclick="alert('感谢您的关注！请拨打热线电话：023-65586813或发送邮件至 spt@sptyun.com 与我们联系。')">立即咨询</button>
             </div>
         </div>
     </section>
@@ -242,7 +246,6 @@
                         <a href="about.html">关于我们</a>
                     </nav>
                 </div>
-                
                 <div class="footer-section">
                     <h4>联系我们</h4>
                     <div class="contact-info">
@@ -251,7 +254,6 @@
                         <p>地址: 重庆市两江新区北滨二路保利中心B3栋10、11F</p>
                     </div>
                 </div>
-                
                 <div class="footer-section">
                     <h4>关注公众号</h4>
                     <div class="qrcode">
@@ -259,10 +261,9 @@
                     </div>
                 </div>
             </div>
-            
             <div class="footer-bottom">
                 <p>智慧电梯全场景解决方案专家</p>
-                <p class="copyright">© 2026 sptyun.com版权所有 渝ICP备16011984号-2</p>
+                <p class="copyright">© 2026 sptyun.com 版权所有 | 渝ICP备16011984号-2</p>
             </div>
         </div>
     </footer>
